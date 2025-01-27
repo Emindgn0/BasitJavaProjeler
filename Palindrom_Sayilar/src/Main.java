@@ -7,7 +7,7 @@ public class Main {
         int number = input.nextInt();
         int temp = number;
         int reverseNumber=0;
-        int originalNumber = number;
+        final int originalNumber = number;
         int digitCount=0;
         // girilen sayının tersini bulduğumuz kısım
         while (number !=0){
@@ -28,10 +28,13 @@ public class Main {
         }while (temp!=0);
         System.out.println(originalNumber + " " + "Sayısı" + " " + digitCount + " " +  "Basamaklıdır !");
         //Sayının tek mi çift mi olduğunu sorguladığımız kısım
-        if (originalNumber /2 ==0)
+        if (originalNumber /2 == 0)
             System.out.println(originalNumber + " " + "Sayısı Çifttir !");
-        else{
-            System.out.println(originalNumber + " " + "Sayısı Tektir !");
+        else if (originalNumber==2){
+            System.out.println(originalNumber + " " + "Sayısı Çifttir !");
+        }else  System.out.println(originalNumber + " " + "Sayısı Tektir !");
+
+            
         }
     }
-}
+
