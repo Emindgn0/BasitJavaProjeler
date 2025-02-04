@@ -13,19 +13,32 @@ public class Main {
             int tahmin;
             int denemeSayisi=0;
             boolean tahminDogru=false;
+            int kalanHak=5;
+
 
             System.out.print(" 1 ile 50 arası bir sayı tuttum. Tahmin et ! ");
+            System.out.println("Kalan Hak : " + kalanHak);
 
-            while (!tahminDogru){
+            while (kalanHak>0){
                 System.out.print(" Tahmininiz : ");
                 tahmin= scan.nextInt();
                 denemeSayisi++;
+                kalanHak--;
+
                 if (tahmin<rastgeleSayi){
                     System.out.print(" Daha büyük bir sayı giriniz ! ");
+                    System.out.println("Kalan Hak : " + kalanHak);
                 } else if (tahmin>rastgeleSayi) {
                     System.out.print(" Daha küçük bir sayı giriniz !");
+                    System.out.println("Kalan Hak : " + kalanHak);
                 }else{ tahminDogru=true;
                 System.out.print(" Tebrikler " + denemeSayisi + " . tahminde bildiniz !!!");
+
+                    break;
+
+                }
+                if (kalanHak==0 && !tahminDogru){
+                    System.out.println("Hak Bitti Kaybettiniz. Doğru cevap :" +rastgeleSayi );
                 }
 
             }
