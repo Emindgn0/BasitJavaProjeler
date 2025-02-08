@@ -2,6 +2,7 @@ public class Employee {
     private String nameLastname;
     private String number ;
     private int age;
+    private String department;
 
 
     public String getNameLastname(){
@@ -28,7 +29,11 @@ public class Employee {
         this.age = age;
     }
 
+    public String getDepartment() {
+        return department;
+    }
 
-
-
+    public void setDepartment(String department) {
+        this.department = department;
+    }
 }
